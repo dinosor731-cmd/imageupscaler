@@ -1,0 +1,92 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.dropzone {
+  border: 2px dashed #ccc;
+  padding: 40px;
+  margin: 20px 0;
+  cursor: pointer;
+  background-color: #fafafa;
+  transition: background-color 0.3s;
+}
+
+.dropzone.active {
+  background-color: #e0f7fa;
+}
+
+.preview {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.preview div {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.preview img {
+  max-width: 100%;
+  height: auto;
+}
+
+.options {
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+  .preview {
+    flex-direction: column;
+  }
+  .preview div {
+    margin: 10px 0;
+  }
+}
